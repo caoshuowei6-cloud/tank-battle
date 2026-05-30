@@ -944,6 +944,7 @@ class Game {
     }
 
     drawMap() {
+        if (!this.map || this.map.length === 0) return;
         for (let row = 0; row < MAP_HEIGHT; row++) {
             for (let col = 0; col < MAP_WIDTH; col++) {
                 const tileType = this.map[row][col];
